@@ -1,0 +1,15 @@
+h1 {
+    font-family: 'Arial'
+}
+
+#myCanvas {
+    border: solid 1px gray;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+.submission {
+    margin-bottom: 10px;
+}
