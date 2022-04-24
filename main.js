@@ -98,7 +98,7 @@ function checkInput(event) {
 
 function loadLocalStorage() {
     localStorage.getItem("userWidth", width);
-    localStorage.getItem("userHeight", height);
+    localStorage.getItserHeight("userHeight", height);
     localStorage.getItem("userPosX", posX);
     localStorage.getItem("userPosY", posY);
 
