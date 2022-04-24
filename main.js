@@ -65,13 +65,13 @@ function checkInput(event) {
         return;
     }
 
-    if (height === (posX <= 0)) {
+    if (height === (posY <= 0)) {
         alert("Invalid values!");
         event.preventDefault();
         return;
     }
 
-    if (width === (posY >= 300)) {
+    if (width === (posX >= 300)) {
         alert("Invalid values!");
         event.preventDefault();
         return;
