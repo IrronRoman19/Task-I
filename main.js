@@ -6,10 +6,10 @@ function checkInput(event) {
     let posXBox = document.querySelector(`#posXBox`);
     let posYBox = document.querySelector(`#posYBox`);
 
-    let width = widthBox.value;
-    let height = heightBox.value;
-    let posX = posXBox.value;
-    let posY = posYBox.value;
+    let width = +widthBox.value;
+    let height = +heightBox.value;
+    let posX = +posXBox.value;
+    let posY = +posYBox.value;
 
     if (width === "") {
         alert("Missing width!");
