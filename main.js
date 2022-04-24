@@ -59,7 +59,7 @@ function checkInput(event) {
         return;
     }
 
-    if ((height + posY >= 300) || (width + posX >= 300)) {
+    if (((height + posY) >= 300) || ((width + posX) >= 300)) {
         alert("Invalid values!");
         event.preventDefault();
         return;
