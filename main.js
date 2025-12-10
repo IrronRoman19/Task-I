@@ -61,12 +61,17 @@ function checkInput(event) {
 }
 
 function loadLocalStorage() {
-    localStorage.getItem("userWidth", width);
-    localStorage.getItserHeight("userHeight", height);
-    localStorage.getItem("userPosX", posX);
-    localStorage.getItem("userPosY", posY);
+    const width = localStorage.getItem("userWidth");
+    const height = localStorage.getItem("userHeight");
+    const posX = localStorage.getItem("userPosX");
+    const posY = localStorage.getItem("userPosY");
 
-    checkInput();
+    if (width && height && posX && posY) {
+        document.querySelector("#widthBox").value = width;
+        document.querySelector("#heightBox").value = height;
+        document.querySelector("#posXBox").value = posX;
+        document.querySelector("#posYBox").value = posY;
+    }
 }
 
 function clearCanvas() {
@@ -74,6 +79,18 @@ function clearCanvas() {
     const painter = myCanvas.getContext("2d");
   
     painter.clearRect(0, 0, 300, 300);
+
+    // Clear input fields
+    document.querySelector("#widthBox").value = "";
+    document.querySelector("#heightBox").value = "";
+    document.querySelector("#posXBox").value = "";
+    document.querySelector("#posYBox").value = "";
+
+    // Clear local storage
+    localStorage.removeItem("userWidth");
+    localStorage.removeItem("userHeight");
+    localStorage.removeItem("userPosX");
+    localStorage.removeItem("userPosY");
 }
 
 function onWindowLoad() {
